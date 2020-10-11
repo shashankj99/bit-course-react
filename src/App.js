@@ -1,11 +1,9 @@
 import React from 'react';
-import {Typography} from '@material-ui/core';
+import SignIn from "./components/SignInPage";
 
 function App() {
     return (
-        <Typography component='h1' variant='h5'>
-            Hello World
-        </Typography>
+        <SignIn />
     );
 }
 
