@@ -1,9 +1,15 @@
 import React from 'react';
-import SignIn from "./components/SignInPage";
+import SignInPage from "./components/Auth/SignInPage";
+import Auth from './hoc/auth';
+import HomePage from "./components/HomePage";
+import {Route, Switch} from 'react-router-dom';
 
 function App() {
     return (
-        <SignIn />
+        <Switch>
+            <Route exact path='/login' component={Auth(SignInPage, false)} />
+            <Route exact path='/' component={Auth(HomePage, null)} />
+        </Switch>
     );
 }
 
